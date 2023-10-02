@@ -3,6 +3,13 @@ import express from "express";
 import helmet from "helmet";
 import fetch from "node-fetch";
 
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
 //set app type and port
 const app = express();
 const port = process.env.PORT || 3001;
