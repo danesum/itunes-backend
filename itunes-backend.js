@@ -2,8 +2,8 @@
 import express from "express";
 import helmet from "helmet";
 import fetch from "node-fetch";
+import cors from "cors";
 
-const cors = require("cors");
 app.use(
   cors({
     origin: "*",
