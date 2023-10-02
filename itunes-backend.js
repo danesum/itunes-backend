@@ -4,18 +4,17 @@ import helmet from "helmet";
 import fetch from "node-fetch";
 import cors from "cors";
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-
 //set app type and port
 const app = express();
 const port = process.env.PORT || 3001;
 
 //make app use helmet for security
 app.use(helmet());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 //get function which listens on /search/, acting as a
 //forwarding function to interface with the external API
